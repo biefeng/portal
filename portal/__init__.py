@@ -20,18 +20,19 @@ logger = logging.getLogger(__name__)
 
 
 def configure_app(app, config):
-    app.pluggy = PluginManager(APP_NAME)
+    # app.pluggy = PluginManager(APP_NAME)
+    pass
 
 
-def load_plugins(app):
-    app.pluggy.add_hookspecs(CustomSpec)
-    app_modules = set(
-        module
-        for name, module in iteritems(sys.modules)
-        if name.startswith(APP_NAME)
-    )
-    for module in app_modules:
-        app.pluggy.register(module)
+# def load_plugins(app):
+#     app.pluggy.add_hookspecs(CustomSpec)
+#     app_modules = set(
+#         module
+#         for name, module in iteritems(sys.modules)
+#         if name.startswith(APP_NAME)
+#     )
+#     for module in app_modules:
+#         app.pluggy.register(module)
 
 
 def configure_blueprints(app):

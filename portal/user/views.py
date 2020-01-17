@@ -2,12 +2,12 @@
 # author : BieFeNg
 # date_time 2020/01/15 11:12
 # file_name : views.py
-from flask.views import MethodView
-from flask import render_template, Blueprint, current_app
-from ..config import APP_NAME
-from pluggy import HookimplMarker
-from ..utils.helper import registry_view
 import logging
+
+from flask import render_template, Blueprint
+from flask.views import MethodView
+
+from ..utils.helper import registry_view
 
 logger = logging.getLogger(__name__)
 

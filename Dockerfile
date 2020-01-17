@@ -1,4 +1,4 @@
-FROM python:2.7-alpin3.10
+FROM python:2.7-alpin
 WORKDIR /home/BieFeNg/workspace/portal
 
 COPY requirements.txt requirements.txt

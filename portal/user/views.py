@@ -25,6 +25,7 @@ logger = logging.getLogger(__name__)
 class Login(MethodView):
     def get(self, user_id):
         data = list()
+        logger.debug("logging the login operation")
         for i in range(5):
             element = dict()
             element["name"] = "Idea 部署Wep-app: " + str(i)

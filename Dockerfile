@@ -12,6 +12,8 @@ RUN pip install uwsgi
 COPY portal portal
 COPY migrations migrations
 COPY test.db test.db
+COPY uwsgi.ini uwsgi.ini
+COPY wsgi.py wsgi.py
 
 #RUN flask db upgrade
 

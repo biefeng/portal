@@ -15,7 +15,6 @@ from ._compat import *
 from .config import APP_NAME, get_database
 from .plugins.spec import CustomSpec
 from .shard import db
-from .user import views
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +35,14 @@ def load_plugins(app):
 
 
 def configure_blueprints(app):
-    app.pluggy.hook.app_or_blueprint_load_route(app=app)
+    # app.pluggy.hook.app_or_blueprint_load_route(app=app)
+    from .user.views import user_bp
+    bps = [
+        user_bp
+    ]
+
+    for bp in bps:
+        app.register_blueprint(bp)
 
 
 def configure_db(app):
@@ -113,7 +119,7 @@ def configure_blogging(app):
 def create_app():
     app = Flask(__name__)
     configure_app(app, None)
-    load_plugins(app)
+    # load_plugins(app)
     configure_db(app)
     configure_blueprints(app)
     configure_blogging(app)

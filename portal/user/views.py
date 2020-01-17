@@ -9,16 +9,6 @@ from pluggy import HookimplMarker
 from ..utils.helper import registry_view
 import logging
 
-impl = HookimplMarker(APP_NAME)
-
-
-@impl(tryfirst=True)
-def app_or_blueprint_load_route(app):
-    user_bp = Blueprint("user", __name__)
-    registry_view(user_bp, routes=["/login/<int:user_id>"], view_func=Login.as_view("login"))
-    app.register_blueprint(user_bp, url_prefix="/user")
-
-
 logger = logging.getLogger(__name__)
 
 
@@ -36,3 +26,7 @@ class Login(MethodView):
     def post(self):
         data = {"name": "BieFeNg"}
         return render_template("base.html", data=data)
+
+
+user_bp = Blueprint("user", __name__, url_prefix="/user")
+registry_view(user_bp, routes=["/login/<int:user_id>"], view_func=Login.as_view("login"))

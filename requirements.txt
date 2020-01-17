@@ -1,0 +1,17 @@
+certifi==2016.2.28
+Click==7.0
+configparser==4.0.2
+contextlib2==0.6.0.post1
+Flask==1.1.1
+importlib-metadata==1.4.0
+itsdangerous==1.1.0
+Jinja2==2.10.3
+MarkupSafe==1.1.1
+more-itertools==5.0.0
+pathlib2==2.3.5
+scandir==1.10.0
+six==1.14.0
+waitress==1.4.2
+Werkzeug==0.16.0
+wincertstore==0.2
+zipp==1.0.0

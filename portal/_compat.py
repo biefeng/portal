@@ -20,7 +20,6 @@ if not PY2:  # pragma: no cover
     iteritems = lambda d: iter(d.items())
 else:  # pragma: no cover
     from abc import ABCMeta
-
     ABC = ABCMeta('ABC', (object,), {})
     text_type = unicode
     string_types = (str, unicode)

@@ -12,4 +12,4 @@ spec = HookspecMarker(APP_NAME)
 class CustomSpec:
     @spec
     def app_or_blueprint_load_route(app):
-        """app or blueprint used to load route"""
+        """portal or blueprint used to load route"""

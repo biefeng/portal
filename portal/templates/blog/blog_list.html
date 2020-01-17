@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block header %}
+    <div>
+
+    </div>
+{% endblock %}
+{% block main %}
+    <div style="border: 0px solid red;display: inline-block;width: 70%;vertical-align: top">
+        <ul style="list-style: none;padding-left: 0px">
+            {% for element in data %}
+                <li class="home-list-item">
+                    <div style="padding-left: 10px">
+                        <p style="font-size: 15px;font-weight: bolder;margin-bottom: 5px">{{ element.name }}</p>
+                        <p style="margin: 0px;font-weight: lighter">{{ element.abbreviation }}</p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -15,4 +15,4 @@ COPY test.db test.db
 
 #RUN flask db upgrade
 
-CMD ["flask","run"]
+CMD ["uwsgi","--ini","uwsgi.ini"]

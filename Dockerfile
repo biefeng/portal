@@ -10,6 +10,6 @@ COPY portal portal
 COPY migrations migrations
 COPY test.db test.db
 
-RUN venv/bin/flask db upgrade
+RUN flask db upgrade
 
 CMD ["flask","run"]

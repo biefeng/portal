@@ -9,11 +9,9 @@ from flask import Flask, render_template_string, redirect
 from flask_blogging import SQLAStorage, BloggingEngine
 from flask_login import UserMixin, LoginManager, login_user, logout_user
 from flask_migrate import Migrate
-from pluggy import PluginManager
 
 from ._compat import *
 from .config import APP_NAME, get_database
-from .plugins.spec import CustomSpec
 from .shard import db
 
 logger = logging.getLogger(__name__)

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BieFeNg</title>
+</head>
+<body>
+<div style="margin-top: 100px">
+    <div style="max-width: 70%;margin: 0px auto">
+        <article>
+            <h1 style="font-size: 40px;">BieFeNg</h1>
+            <p>大江东去...</p>
+        </article>
+        <div>
+            {% block main %}
+                <div style="border: 0px solid red;display: inline-block;width: 70%;vertical-align: top">
+
+                    <ul style="list-style: none;padding-left: 0px">
+                        <li class="home-list-item">
+                            <div style="padding-left: 10px">
+                                <p style="font-size: 15px;font-weight: bolder;margin-bottom: 5px">Blog</p>
+                                <p style="margin: 0px;font-weight: lighter">share</p>
+                            </div>
+                        </li>
+
+                        <li class="home-list-item">
+                            <div style="padding-left: 10px">
+                                <p style="font-size: 15px;font-weight: bolder;margin-bottom: 5px">Blog</p>
+                                <p style="margin: 0px;font-weight: lighter">share</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            {% endblock %}
+            {% block left %}
+                <div style="border: 0px solid red;display: inline-block;width: 25%;vertical-align: top;">
+                    <div>
+                        <h4>留言板</h4>
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<style>
+    .home-list-item :hover {
+        background-color: aliceblue;
+    }
+</style>

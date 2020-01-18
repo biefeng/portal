@@ -17,5 +17,5 @@ COPY wsgi.py wsgi.py
 
 #RUN flask db upgrade
 
-#CMD ["uwsgi","--ini","uwsgi.ini"]
-CMD ["uwsgi","--socket", "127.0.0.1:7537", "--wsgi-file", "wsgi.py" ,"--callable", "portal" ,"--processes", "4" ,"--threads", "2", "--stats" ,"127.0.0.1:9191"]
+CMD ["uwsgi","--ini","./uwsgi.ini"]
+#CMD ["uwsgi","--socket", "127.0.0.1:7537", "--wsgi-file", "wsgi.py" ,"--callable", "portal" ,"--processes", "4" ,"--threads", "2", "--stats" ,"127.0.0.1:9191"]

@@ -3,6 +3,11 @@
 # date_time 2020/01/17 23:06
 # file_name : wsgi.py
 
+import sys
+
+if sys.getdefaultencoding() != 'utf-8':
+    sys.setdefaultencoding("utf-8")
+
 from portal import create_app
 
 portal = create_app()

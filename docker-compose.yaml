@@ -3,7 +3,8 @@ services:
   web:
     container_name: "portal"
     build: .
-    #ports:
+    ports:
+      - "9191:9191"
     # - "7537:7537"
     expose:
       - "7537"

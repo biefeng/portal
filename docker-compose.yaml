@@ -1,6 +1,6 @@
 version: '3'
 services:
-  web:
+  portal:
     container_name: "portal"
     build: .
     #ports:
@@ -16,4 +16,4 @@ services:
       - "./nginx.conf:/etc/nginx/nginx.conf:ro"
       - "./index.html:/usr/share/nginx/html/index.html:ro"
     depends_on:
-      - web
+      - portal

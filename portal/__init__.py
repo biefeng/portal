@@ -41,7 +41,7 @@ def configure_blueprints(app):
     ]
 
     for bp in bps:
-        app.register_blueprint(bp)
+        app.register_blueprint(bp, url_prefix="/portal")
 
 
 def configure_db(app):

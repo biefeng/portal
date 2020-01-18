@@ -6,3 +6,5 @@ services:
       - "7537:7537"
   nginx:
     image: "nginx:alpine"
+    ports:
+      - "80:80"

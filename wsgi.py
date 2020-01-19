@@ -5,9 +5,16 @@
 
 import sys
 
+from portal import create_app
+
+if sys.version_info[0] == 2:
+    reload(sys)
+else:
+    import importlib
+
+    importlib.reload(sys)
+
 if sys.getdefaultencoding() != 'utf-8':
     sys.setdefaultencoding("utf-8")
-
-from portal import create_app
 
 portal = create_app()

@@ -9,7 +9,7 @@ services:
     expose:
       - "7537"
     volumes:
-      - './logs/portal:./app.log'
+      - './logs/portal:/home/BieFeNg/workspace/portal/app.log'
 
   nginx:
     container_name: "nginx"
